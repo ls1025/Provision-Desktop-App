@@ -114,10 +114,8 @@ Public Class viewcorrectionsdate
     End Sub
     Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
         If DataGridView1.SelectedCells.Count > 0 Then
-            Dim form As New senddatatodqa
-            form.TextBox1.Text = DataGridView1.SelectedCells(0).Value
-            form.TextBox2.Text = DataGridView1.SelectedCells(1).Value
-            form.TextBox3.Text = DataGridView1.SelectedCells(2).Value
+            Dim form As New viewcorrections
+            form.Label1.Text = DataGridView1.SelectedCells(2).Value
             form.Owner = Me
             form.ShowDialog()
         End If

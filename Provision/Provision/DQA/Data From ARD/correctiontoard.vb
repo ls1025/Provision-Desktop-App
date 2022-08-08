@@ -1,11 +1,4 @@
-﻿Imports System.Data
-Imports System.Data.SqlClient
-Imports iTextSharp.text.pdf
-Imports iTextSharp.text
-Imports System.IO
-Imports System.Threading
-Imports System.Diagnostics
-Imports System.ComponentModel
+﻿Imports System.Data.SqlClient
 
 Public Class correctiontoard
     'Dim con As SqlConnection = New SqlConnection("Data Source=VE-IT\SQLEXPRESS;Initial Catalog=vensure;Integrated Security=True")
@@ -98,4 +91,9 @@ Public Class correctiontoard
         Me.Close()
     End Sub
 
+    Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
+        Dim form As New viewcorrections
+        form.Label1.Text = TextBox3.Text
+        form.ShowDialog()
+    End Sub
 End Class

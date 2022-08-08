@@ -34,12 +34,14 @@ Partial Class releasedataatr
         Me.GunaLabel3 = New Guna.UI.WinForms.GunaLabel()
         Me.Button2 = New Guna.UI.WinForms.GunaGradientButton()
         Me.Button1 = New Guna.UI.WinForms.GunaGradientButton()
+        Me.GunaGradientButton1 = New Guna.UI.WinForms.GunaGradientButton()
         Me.GunaPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GunaPanel1
         '
         Me.GunaPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.GunaPanel1.Controls.Add(Me.GunaGradientButton1)
         Me.GunaPanel1.Controls.Add(Me.CheckedListBox1)
         Me.GunaPanel1.Controls.Add(Me.TextBox3)
         Me.GunaPanel1.Controls.Add(Me.GunaLabel4)
@@ -86,7 +88,7 @@ Partial Class releasedataatr
         Me.TextBox3.Radius = 5
         Me.TextBox3.ReadOnly = True
         Me.TextBox3.SelectedText = ""
-        Me.TextBox3.Size = New System.Drawing.Size(758, 33)
+        Me.TextBox3.Size = New System.Drawing.Size(590, 33)
         Me.TextBox3.TabIndex = 31
         '
         'GunaLabel4
@@ -243,6 +245,38 @@ Partial Class releasedataatr
         Me.Button1.Text = "Release"
         Me.Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
+        'GunaGradientButton1
+        '
+        Me.GunaGradientButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GunaGradientButton1.Animated = True
+        Me.GunaGradientButton1.AnimationHoverSpeed = 0.07!
+        Me.GunaGradientButton1.AnimationSpeed = 0.03!
+        Me.GunaGradientButton1.BackColor = System.Drawing.Color.Transparent
+        Me.GunaGradientButton1.BaseColor1 = System.Drawing.Color.Transparent
+        Me.GunaGradientButton1.BaseColor2 = System.Drawing.Color.Transparent
+        Me.GunaGradientButton1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.GunaGradientButton1.BorderSize = 1
+        Me.GunaGradientButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.GunaGradientButton1.DialogResult = System.Windows.Forms.DialogResult.None
+        Me.GunaGradientButton1.FocusedColor = System.Drawing.Color.Empty
+        Me.GunaGradientButton1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GunaGradientButton1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.GunaGradientButton1.Image = Global.Provision.My.Resources.Resources.comments_blue_30px
+        Me.GunaGradientButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.GunaGradientButton1.ImageSize = New System.Drawing.Size(20, 20)
+        Me.GunaGradientButton1.Location = New System.Drawing.Point(797, 115)
+        Me.GunaGradientButton1.Name = "GunaGradientButton1"
+        Me.GunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.GunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(207, Byte), Integer))
+        Me.GunaGradientButton1.OnHoverBorderColor = System.Drawing.Color.White
+        Me.GunaGradientButton1.OnHoverForeColor = System.Drawing.Color.White
+        Me.GunaGradientButton1.OnHoverImage = Global.Provision.My.Resources.Resources.comments_white_30px
+        Me.GunaGradientButton1.OnPressedColor = System.Drawing.Color.Black
+        Me.GunaGradientButton1.Radius = 5
+        Me.GunaGradientButton1.Size = New System.Drawing.Size(162, 33)
+        Me.GunaGradientButton1.TabIndex = 40
+        Me.GunaGradientButton1.Text = "Corrections"
+        '
         'releasedataatr
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -271,4 +305,5 @@ Partial Class releasedataatr
     Friend WithEvents TextBox3 As Guna.UI.WinForms.GunaTextBox
     Friend WithEvents GunaLabel4 As Guna.UI.WinForms.GunaLabel
     Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents GunaGradientButton1 As Guna.UI.WinForms.GunaGradientButton
 End Class

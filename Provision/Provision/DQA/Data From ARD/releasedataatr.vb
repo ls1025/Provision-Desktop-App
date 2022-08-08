@@ -97,4 +97,9 @@ Public Class releasedataatr
         Me.Close()
     End Sub
 
+    Private Sub GunaGradientButton1_Click(sender As Object, e As EventArgs) Handles GunaGradientButton1.Click
+        Dim form As New viewcorrections
+        form.Label1.Text = TextBox3.Text
+        form.ShowDialog()
+    End Sub
 End Class

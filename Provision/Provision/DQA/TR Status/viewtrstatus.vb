@@ -408,6 +408,7 @@ Public Class viewtrstatus
                 MessageBox.Show(ex.Message)
             End Try
 
+
         ElseIf ComboBox3.Text = "Released" Then
             Try
                 If con.State = ConnectionState.Open Then con.Close()
