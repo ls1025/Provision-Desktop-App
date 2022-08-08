@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="provisionConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="provisionConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Provision.My.MySettings.GlobalReference.Default.provisionConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="provisionConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT rld_master.proname, rld_master.strength, rld_master.brand, rld_master.cntry, rld_master.manfact, rld_master.btn, rld_master.packstyle, rld_master.receiptdate, rld_master.expdate, rld_master.receivedqty, 
+                  rld_master.recformat, rld_master.balanceqty, rld_master.rldaddedby, rld_master.rldaddeddate, rld_recon.sampleqty, rld_recon.test, rld_recon.remark, rld_recon.issuedby, rld_recon.issuedon,rld_recon.issuedto
+FROM     rld_master INNER JOIN
+                  rld_recon ON rld_master.id = rld_recon.ref_id
+WHERE  (rld_master.id IN
+                      (SELECT ref_id
+                       FROM      rld_recon AS rld_recon_1))</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="proname" DataSetColumn="proname" />
+              <Mapping SourceColumn="strength" DataSetColumn="strength" />
+              <Mapping SourceColumn="brand" DataSetColumn="brand" />
+              <Mapping SourceColumn="cntry" DataSetColumn="cntry" />
+              <Mapping SourceColumn="manfact" DataSetColumn="manfact" />
+              <Mapping SourceColumn="btn" DataSetColumn="btn" />
+              <Mapping SourceColumn="packstyle" DataSetColumn="packstyle" />
+              <Mapping SourceColumn="receiptdate" DataSetColumn="receiptdate" />
+              <Mapping SourceColumn="expdate" DataSetColumn="expdate" />
+              <Mapping SourceColumn="receivedqty" DataSetColumn="receivedqty" />
+              <Mapping SourceColumn="recformat" DataSetColumn="recformat" />
+              <Mapping SourceColumn="balanceqty" DataSetColumn="balanceqty" />
+              <Mapping SourceColumn="rldaddedby" DataSetColumn="rldaddedby" />
+              <Mapping SourceColumn="rldaddeddate" DataSetColumn="rldaddeddate" />
+              <Mapping SourceColumn="sampleqty" DataSetColumn="sampleqty" />
+              <Mapping SourceColumn="test" DataSetColumn="test" />
+              <Mapping SourceColumn="remark" DataSetColumn="remark" />
+              <Mapping SourceColumn="issuedby" DataSetColumn="issuedby" />
+              <Mapping SourceColumn="issuedon" DataSetColumn="issuedon" />
+              <Mapping SourceColumn="issuedto" DataSetColumn="issuedto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="proname" msprop:Generator_ColumnVarNameInTable="columnproname" msprop:Generator_ColumnPropNameInRow="proname" msprop:Generator_ColumnPropNameInTable="pronameColumn" msprop:Generator_UserColumnName="proname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="strength" msprop:Generator_ColumnVarNameInTable="columnstrength" msprop:Generator_ColumnPropNameInRow="strength" msprop:Generator_ColumnPropNameInTable="strengthColumn" msprop:Generator_UserColumnName="strength" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="brand" msprop:Generator_ColumnVarNameInTable="columnbrand" msprop:Generator_ColumnPropNameInRow="brand" msprop:Generator_ColumnPropNameInTable="brandColumn" msprop:Generator_UserColumnName="brand" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cntry" msprop:Generator_ColumnVarNameInTable="columncntry" msprop:Generator_ColumnPropNameInRow="cntry" msprop:Generator_ColumnPropNameInTable="cntryColumn" msprop:Generator_UserColumnName="cntry" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="manfact" msprop:Generator_ColumnVarNameInTable="columnmanfact" msprop:Generator_ColumnPropNameInRow="manfact" msprop:Generator_ColumnPropNameInTable="manfactColumn" msprop:Generator_UserColumnName="manfact" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="btn" msprop:Generator_ColumnVarNameInTable="columnbtn" msprop:Generator_ColumnPropNameInRow="btn" msprop:Generator_ColumnPropNameInTable="btnColumn" msprop:Generator_UserColumnName="btn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="packstyle" msprop:Generator_ColumnVarNameInTable="columnpackstyle" msprop:Generator_ColumnPropNameInRow="packstyle" msprop:Generator_ColumnPropNameInTable="packstyleColumn" msprop:Generator_UserColumnName="packstyle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="receiptdate" msprop:Generator_ColumnVarNameInTable="columnreceiptdate" msprop:Generator_ColumnPropNameInRow="receiptdate" msprop:Generator_ColumnPropNameInTable="receiptdateColumn" msprop:Generator_UserColumnName="receiptdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="expdate" msprop:Generator_ColumnVarNameInTable="columnexpdate" msprop:Generator_ColumnPropNameInRow="expdate" msprop:Generator_ColumnPropNameInTable="expdateColumn" msprop:Generator_UserColumnName="expdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="receivedqty" msprop:Generator_ColumnVarNameInTable="columnreceivedqty" msprop:Generator_ColumnPropNameInRow="receivedqty" msprop:Generator_ColumnPropNameInTable="receivedqtyColumn" msprop:Generator_UserColumnName="receivedqty" type="xs:int" minOccurs="0" />
+              <xs:element name="recformat" msprop:Generator_ColumnVarNameInTable="columnrecformat" msprop:Generator_ColumnPropNameInRow="recformat" msprop:Generator_ColumnPropNameInTable="recformatColumn" msprop:Generator_UserColumnName="recformat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="balanceqty" msprop:Generator_ColumnVarNameInTable="columnbalanceqty" msprop:Generator_ColumnPropNameInRow="balanceqty" msprop:Generator_ColumnPropNameInTable="balanceqtyColumn" msprop:Generator_UserColumnName="balanceqty" type="xs:int" minOccurs="0" />
+              <xs:element name="rldaddedby" msprop:Generator_ColumnVarNameInTable="columnrldaddedby" msprop:Generator_ColumnPropNameInRow="rldaddedby" msprop:Generator_ColumnPropNameInTable="rldaddedbyColumn" msprop:Generator_UserColumnName="rldaddedby" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rldaddeddate" msprop:Generator_ColumnVarNameInTable="columnrldaddeddate" msprop:Generator_ColumnPropNameInRow="rldaddeddate" msprop:Generator_ColumnPropNameInTable="rldaddeddateColumn" msprop:Generator_UserColumnName="rldaddeddate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sampleqty" msprop:Generator_ColumnVarNameInTable="columnsampleqty" msprop:Generator_ColumnPropNameInRow="sampleqty" msprop:Generator_ColumnPropNameInTable="sampleqtyColumn" msprop:Generator_UserColumnName="sampleqty" type="xs:int" minOccurs="0" />
+              <xs:element name="test" msprop:Generator_ColumnVarNameInTable="columntest" msprop:Generator_ColumnPropNameInRow="test" msprop:Generator_ColumnPropNameInTable="testColumn" msprop:Generator_UserColumnName="test" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remark" msprop:Generator_ColumnVarNameInTable="columnremark" msprop:Generator_ColumnPropNameInRow="remark" msprop:Generator_ColumnPropNameInTable="remarkColumn" msprop:Generator_UserColumnName="remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="issuedby" msprop:Generator_ColumnVarNameInTable="columnissuedby" msprop:Generator_ColumnPropNameInRow="issuedby" msprop:Generator_ColumnPropNameInTable="issuedbyColumn" msprop:Generator_UserColumnName="issuedby" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="issuedon" msprop:Generator_ColumnVarNameInTable="columnissuedon" msprop:Generator_ColumnPropNameInRow="issuedon" msprop:Generator_ColumnPropNameInTable="issuedonColumn" msprop:Generator_UserColumnName="issuedon" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="issuedto" msprop:Generator_ColumnVarNameInTable="columnissuedto" msprop:Generator_ColumnPropNameInRow="issuedto" msprop:Generator_ColumnPropNameInTable="issuedtoColumn" msprop:Generator_UserColumnName="issuedto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
