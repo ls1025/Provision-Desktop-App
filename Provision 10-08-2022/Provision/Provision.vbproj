@@ -1,0 +1,2685 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBD15E1C-AA0A-41DF-AD39-D2E43A4E2ED3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Provision.My.MyApplication</StartupObject>
+    <RootNamespace>Provision</RootNamespace>
+    <AssemblyName>Provision</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Shiva Vemula\Desktop\New folder %285%29\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\192.168.2.200\it\New folder\</InstallUrl>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Provision.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Provision.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F17CD5A075137E5576501BCDEDF8F44C97C4384F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Provision_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=1.2.26803.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DG.AdvancedDataGridView.1.2.26803.6\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\packeges\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\packeges\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packeges\itextsharp7\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\packeges\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SautinSoft.PdfFocus">
+      <HintPath>..\packeges\SautinSoft.PdfFocus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About\about.designer.vb">
+      <DependentUpon>about.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About\about.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Archival\changelocation.Designer.vb">
+      <DependentUpon>changelocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Archival\changelocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Archival\Location Matrix\viewlocationdocdetails.designer.vb">
+      <DependentUpon>viewlocationdocdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Archival\Location Matrix\viewlocationdocdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Archival\Location Matrix\viewlocationmain.designer.vb">
+      <DependentUpon>viewlocationmain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Archival\Location Matrix\viewlocationmain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Archival\Location Matrix\viewlocationsub.designer.vb">
+      <DependentUpon>viewlocationsub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Archival\Location Matrix\viewlocationsub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Archival\updatedocdetial.Designer.vb">
+      <DependentUpon>updatedocdetial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Archival\updatedocdetial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Archival\viewarchivecatogery.designer.vb">
+      <DependentUpon>viewarchivecatogery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Archival\viewarchivecatogery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Archival\viewarchivedocdetails.designer.vb">
+      <DependentUpon>viewarchivedocdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Archival\viewarchivedocdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Archival\viewarchivedoctype.designer.vb">
+      <DependentUpon>viewarchivedoctype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Archival\viewarchivedoctype.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\adddcotype.Designer.vb">
+      <DependentUpon>adddcotype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\adddcotype.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\adddoccategory.Designer.vb">
+      <DependentUpon>adddoccategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\adddoccategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\archivedoc.Designer.vb">
+      <DependentUpon>archivedoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\archivedoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\esigndoccorrection.Designer.vb">
+      <DependentUpon>esigndoccorrection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\esigndoccorrection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\esigndoccorrectionhandover.Designer.vb">
+      <DependentUpon>esigndoccorrectionhandover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\esigndoccorrectionhandover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\esigndochandover.designer.vb">
+      <DependentUpon>esigndochandover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\esigndochandover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\esignhandoverfromdataupload.Designer.vb">
+      <DependentUpon>esignhandoverfromdataupload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\esignhandoverfromdataupload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\handover.designer.vb">
+      <DependentUpon>handover.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\handover.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\handovercorrections.Designer.vb">
+      <DependentUpon>handovercorrections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\handovercorrections.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\openproductlink.Designer.vb">
+      <DependentUpon>openproductlink.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\openproductlink.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\returnforcorrections.Designer.vb">
+      <DependentUpon>returnforcorrections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\returnforcorrections.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\updatehandoverdocdetial.Designer.vb">
+      <DependentUpon>updatehandoverdocdetial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\updatehandoverdocdetial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\viewcorrectionsdocs.Designer.vb">
+      <DependentUpon>viewcorrectionsdocs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\viewcorrectionsdocs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\viewdocdetails.Designer.vb">
+      <DependentUpon>viewdocdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\viewdocdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\viewhandoverdcatogery.designer.vb">
+      <DependentUpon>viewhandoverdcatogery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\viewhandoverdcatogery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Handover\viewhandoverdoctype.designer.vb">
+      <DependentUpon>viewhandoverdoctype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Handover\viewhandoverdoctype.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\esignissuance.designer.vb">
+      <DependentUpon>esignissuance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\esignissuance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\issuancecalender.designer.vb">
+      <DependentUpon>issuancecalender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\issuancecalender.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewdocissuance.Designer.vb">
+      <DependentUpon>viewdocissuance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewdocissuance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewdocissuanceregister.Designer.vb">
+      <DependentUpon>viewdocissuanceregister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewdocissuanceregister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewissuancehistory.Designer.vb">
+      <DependentUpon>viewissuancehistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewissuancehistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Return\esignreturn.designer.vb">
+      <DependentUpon>esignreturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Return\esignreturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\issuedocument.designer.vb">
+      <DependentUpon>issuedocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\issuedocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Return\returndocument.designer.vb">
+      <DependentUpon>returndocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Return\returndocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewissueddocdetails.designer.vb">
+      <DependentUpon>viewissueddocdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewissueddocdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewissuedoccatogery.designer.vb">
+      <DependentUpon>viewissuedoccatogery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewissuedoccatogery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewissuedoctype.designer.vb">
+      <DependentUpon>viewissuedoctype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Archival Management\Issuance\viewissuedoctype.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\changepward.designer.vb">
+      <DependentUpon>changepward.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\changepward.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\issueatrdev.designer.vb">
+      <DependentUpon>issueatrdev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\issueatrdev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\newintimationarddev.designer.vb">
+      <DependentUpon>newintimationarddev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\newintimationarddev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\sendcorrecteddatatodqa.Designer.vb">
+      <DependentUpon>sendcorrecteddatatodqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\sendcorrecteddatatodqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\senddatatodqa.designer.vb">
+      <DependentUpon>senddatatodqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\senddatatodqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\setlnb.designer.vb">
+      <DependentUpon>setlnb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\setlnb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\trcancelprint.designer.vb">
+      <DependentUpon>trcancelprint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\trcancelprint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\trprintdev.designer.vb">
+      <DependentUpon>trprintdev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\trprintdev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\uptrinatrdev.designer.vb">
+      <DependentUpon>uptrinatrdev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\uptrinatrdev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\viewatrissuancelogard.designer.vb">
+      <DependentUpon>viewatrissuancelogard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\viewatrissuancelogard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\viewatrissued.designer.vb">
+      <DependentUpon>viewatrissued.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\viewatrissued.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\viewcancelintimations.designer.vb">
+      <DependentUpon>viewcancelintimations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\viewcancelintimations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\viewcorrections.Designer.vb">
+      <DependentUpon>viewcorrections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\viewcorrections.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\viewcorrectionsdate.Designer.vb">
+      <DependentUpon>viewcorrectionsdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Development\viewcorrectionsdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Export Data\exportdataard.designer.vb">
+      <DependentUpon>exportdataard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Export Data\exportdataard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\homepageard.designer.vb">
+      <DependentUpon>homepageard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\homepageard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\ATR\atrhstryard.designer.vb">
+      <DependentUpon>atrhstryard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\ATR\atrhstryard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\ATR\viewatrdetailsard.designer.vb">
+      <DependentUpon>viewatrdetailsard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\ATR\viewatrdetailsard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\ATR\viewproductatrard.designer.vb">
+      <DependentUpon>viewproductatrard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\ATR\viewproductatrard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\PDS\viewpdsdetailsard.designer.vb">
+      <DependentUpon>viewpdsdetailsard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\PDS\viewpdsdetailsard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\PDS\viewproductpdsard.designer.vb">
+      <DependentUpon>viewproductpdsard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\PDS\viewproductpdsard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\STP\stphstryard.designer.vb">
+      <DependentUpon>stphstryard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\STP\stphstryard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\STP\viewproductstpard.designer.vb">
+      <DependentUpon>viewproductstpard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\STP\viewproductstpard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\STP\viewstpdetailsard.designer.vb">
+      <DependentUpon>viewstpdetailsard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Product Documents\STP\viewstpdetailsard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Compilation\addstbcompilation.designer.vb">
+      <DependentUpon>addstbcompilation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Compilation\addstbcompilation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Compilation\updatestbcompilation.designer.vb">
+      <DependentUpon>updatestbcompilation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Compilation\updatestbcompilation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Compilation\viewstbcompilation.designer.vb">
+      <DependentUpon>viewstbcompilation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Compilation\viewstbcompilation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Compilation\viewuptrendform.Designer.vb">
+      <DependentUpon>viewuptrendform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Compilation\viewuptrendform.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Export\exportstbcompilation.designer.vb">
+      <DependentUpon>exportstbcompilation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Export\exportstbcompilation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Report\DataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Trend\viewtrend.Designer.vb">
+      <DependentUpon>viewtrend.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARD Group Leader\Stability Compilation\Trend\viewtrend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard All\dashboardall.designer.vb">
+      <DependentUpon>dashboardall.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard All\dashboardall.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard All\viewpendingtrdev.designer.vb">
+      <DependentUpon>viewpendingtrdev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard All\viewpendingtrdev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard All\viewpendingtrrot.designer.vb">
+      <DependentUpon>viewpendingtrrot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard All\viewpendingtrrot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard All\viewpendingtrstb.designer.vb">
+      <DependentUpon>viewpendingtrstb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard All\viewpendingtrstb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\ATR\addatr.designer.vb">
+      <DependentUpon>addatr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\ATR\addatr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\ATR\atrhstry.designer.vb">
+      <DependentUpon>atrhstry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\ATR\atrhstry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\ATR\issueatrdqa.designer.vb">
+      <DependentUpon>issueatrdqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\ATR\issueatrdqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\ATR\issuencelog.designer.vb">
+      <DependentUpon>issuencelog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\ATR\issuencelog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\ATR\uptrinatrdqa.designer.vb">
+      <DependentUpon>uptrinatrdqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\ATR\uptrinatrdqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\ATR\viewatrdetails.designer.vb">
+      <DependentUpon>viewatrdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\ATR\viewatrdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\ATR\viewatrissuancelog.designer.vb">
+      <DependentUpon>viewatrissuancelog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\ATR\viewatrissuancelog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\ATR\viewproductatr.designer.vb">
+      <DependentUpon>viewproductatr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\ATR\viewproductatr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\changepwdqa.designer.vb">
+      <DependentUpon>changepwdqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\changepwdqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Data From ARD\correctiontoard.Designer.vb">
+      <DependentUpon>correctiontoard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Data From ARD\correctiontoard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Data From ARD\datafromardatr.designer.vb">
+      <DependentUpon>datafromardatr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Data From ARD\datafromardatr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Data From ARD\datafromardlnb.designer.vb">
+      <DependentUpon>datafromardlnb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Data From ARD\datafromardlnb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Data From ARD\releasedataatr.designer.vb">
+      <DependentUpon>releasedataatr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Data From ARD\releasedataatr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Data From ARD\releasedatalnb.designer.vb">
+      <DependentUpon>releasedatalnb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Data From ARD\releasedatalnb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\homepagedqa.designer.vb">
+      <DependentUpon>homepagedqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\homepagedqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Product Master\viewattachments.Designer.vb">
+      <DependentUpon>viewattachments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Product Master\viewattachments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Upload Data\reuploaddata.Designer.vb">
+      <DependentUpon>reuploaddata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Upload Data\reuploaddata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipment Usage\updateequipdetails.Designer.vb">
+      <DependentUpon>updateequipdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipment Usage\updateequipdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipment Usage\viewequipdetails.Designer.vb">
+      <DependentUpon>viewequipdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipment Usage\viewequipdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipment Usage\viewequipusage.Designer.vb">
+      <DependentUpon>viewequipusage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipment Usage\viewequipusage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipment Usage\viewusagelog.Designer.vb">
+      <DependentUpon>viewusagelog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Equipment Usage\viewusagelog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Product Masters\viewproductmastersdqa.designer.vb">
+      <DependentUpon>viewproductmastersdqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Product Masters\viewproductmastersdqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Test Masters\viewtestmaster.Designer.vb">
+      <DependentUpon>viewtestmaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Test Masters\viewtestmaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\TR Status\detailview.designer.vb">
+      <DependentUpon>detailview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\TR Status\detailview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\TR Status\viewtrstatus.designer.vb">
+      <DependentUpon>viewtrstatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\TR Status\viewtrstatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Dashboard\dashboardfrd.designer.vb">
+      <DependentUpon>dashboardfrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Dashboard\dashboardfrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Dashboard\viewreleasedtrdev.designer.vb">
+      <DependentUpon>viewreleasedtrdev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Dashboard\viewreleasedtrdev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Dashboard\viewreleasedtrrot.designer.vb">
+      <DependentUpon>viewreleasedtrrot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Dashboard\viewreleasedtrrot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Dashboard\viewreleasedtrstb.designer.vb">
+      <DependentUpon>viewreleasedtrstb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Dashboard\viewreleasedtrstb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Export Data\DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Export Data\exportdata.Designer.vb">
+      <DependentUpon>exportdata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Export Data\exportdata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Product Master\addproduct.designer.vb">
+      <DependentUpon>addproduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Product Master\addproduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Test Masters\addtest.Designer.vb">
+      <DependentUpon>addtest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Test Masters\addtest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\PDS\addpds.Designer.vb">
+      <DependentUpon>addpds.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\PDS\addpds.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\PDS\updatepds.designer.vb">
+      <DependentUpon>updatepds.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\PDS\updatepds.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\PDS\viewpdsdetails.Designer.vb">
+      <DependentUpon>viewpdsdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\PDS\viewpdsdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\PDS\viewproductpds.Designer.vb">
+      <DependentUpon>viewproductpds.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\PDS\viewproductpds.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\STP\addstp.designer.vb">
+      <DependentUpon>addstp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\STP\addstp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\STP\addstpmanual.designer.vb">
+      <DependentUpon>addstpmanual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\STP\addstpmanual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\STP\stphstry.Designer.vb">
+      <DependentUpon>stphstry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\STP\stphstry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\STP\viewproductstp.designer.vb">
+      <DependentUpon>viewproductstp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\STP\viewproductstp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\STP\viewstpdetails.designer.vb">
+      <DependentUpon>viewstpdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\STP\viewstpdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Upload Data\uploaddata.designer.vb">
+      <DependentUpon>uploaddata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Upload Data\uploaddata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Upload Data\viewreleaseddata.designer.vb">
+      <DependentUpon>viewreleaseddata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Upload Data\viewreleaseddata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Development\addtrdev.designer.vb">
+      <DependentUpon>addtrdev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Development\addtrdev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\changepwfrdj.designer.vb">
+      <DependentUpon>changepwfrdj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\changepwfrdj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Development\newcancelreqdev.Designer.vb">
+      <DependentUpon>newcancelreqdev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Development\newcancelreqdev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Development\viewcancelintdev.Designer.vb">
+      <DependentUpon>viewcancelintdev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Development\viewcancelintdev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\homepagefrdj.designer.vb">
+      <DependentUpon>homepagefrdj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\homepagefrdj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Development\viewintimationdev.designer.vb">
+      <DependentUpon>viewintimationdev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Development\viewintimationdev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\PDS\viewpdsdetailsfrd.designer.vb">
+      <DependentUpon>viewpdsdetailsfrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\PDS\viewpdsdetailsfrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\PDS\viewproductpdsfrd.designer.vb">
+      <DependentUpon>viewproductpdsfrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\PDS\viewproductpdsfrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Product Master\addstrength.Designer.vb">
+      <DependentUpon>addstrength.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Product Master\addstrength.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Product Masters\viewproductdetails.designer.vb">
+      <DependentUpon>viewproductdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Product Masters\viewproductdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Product Master\viewproductdetailsdqa.designer.vb">
+      <DependentUpon>viewproductdetailsdqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Product Master\viewproductdetailsdqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DQA\Product Master\viewproductmasters.designer.vb">
+      <DependentUpon>viewproductmasters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DQA\Product Master\viewproductmasters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Routine\newcancelreqrot.designer.vb">
+      <DependentUpon>newcancelreqrot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Routine\newcancelreqrot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Routine\viewcancelintrot.designer.vb">
+      <DependentUpon>viewcancelintrot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Routine\viewcancelintrot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Routine\viewintimationrot.Designer.vb">
+      <DependentUpon>viewintimationrot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Routine\viewintimationrot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Stability\addtrstb.Designer.vb">
+      <DependentUpon>addtrstb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Stability\addtrstb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Stability\newcancelreqstb.designer.vb">
+      <DependentUpon>newcancelreqstb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Stability\newcancelreqstb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Stability\viewcancelintstb.designer.vb">
+      <DependentUpon>viewcancelintstb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Stability\viewcancelintstb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Stability\viewintimationstb.Designer.vb">
+      <DependentUpon>viewintimationstb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Stability\viewintimationstb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\Routine\addtrrot.designer.vb">
+      <DependentUpon>addtrrot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\Routine\addtrrot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\STP\stphstryfrd.designer.vb">
+      <DependentUpon>stphstryfrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\STP\stphstryfrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\STP\viewproductstpfrd.designer.vb">
+      <DependentUpon>viewproductstpfrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\STP\viewproductstpfrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\STP\viewstpdetailfrd.designer.vb">
+      <DependentUpon>viewstpdetailfrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\STP\viewstpdetailfrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\TR Status\viewdata.designer.vb">
+      <DependentUpon>viewdata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\TR Status\viewdata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Junior\TR Status\viewtrstatusfrdj.designer.vb">
+      <DependentUpon>viewtrstatusfrdj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Junior\TR Status\viewtrstatusfrdj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Product LNB\esignlnb.designer.vb">
+      <DependentUpon>esignlnb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Product LNB\esignlnb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Product LNB\issuelnb.designer.vb">
+      <DependentUpon>issuelnb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Product LNB\issuelnb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Product LNB\viewlnbdetails.designer.vb">
+      <DependentUpon>viewlnbdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Product LNB\viewlnbdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Product LNB\viewlnbmaster.designer.vb">
+      <DependentUpon>viewlnbmaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Product LNB\viewlnbmaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\changepwfrdgl.designer.vb">
+      <DependentUpon>changepwfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\changepwfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Development\addtrdevfrdgl.designer.vb">
+      <DependentUpon>addtrdevfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Development\addtrdevfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Development\newcancelreqdevfrdgl.designer.vb">
+      <DependentUpon>newcancelreqdevfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Development\newcancelreqdevfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Development\updatetrdev.Designer.vb">
+      <DependentUpon>updatetrdev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Development\updatetrdev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Development\viewcancelintdevfrdgl.designer.vb">
+      <DependentUpon>viewcancelintdevfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Development\viewcancelintdevfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Development\viewintimationdevfrdgl.designer.vb">
+      <DependentUpon>viewintimationdevfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Development\viewintimationdevfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\homepagefrdgl.designer.vb">
+      <DependentUpon>homepagefrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\homepagefrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Routine\addtrrotfrdgl.designer.vb">
+      <DependentUpon>addtrrotfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Routine\addtrrotfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Routine\newcancelreqrotfrdgl.designer.vb">
+      <DependentUpon>newcancelreqrotfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Routine\newcancelreqrotfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Routine\updatetrrot.designer.vb">
+      <DependentUpon>updatetrrot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Routine\updatetrrot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Routine\viewcancelintrotfrdgl.designer.vb">
+      <DependentUpon>viewcancelintrotfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Routine\viewcancelintrotfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Routine\viewintimationrotfrdgl.designer.vb">
+      <DependentUpon>viewintimationrotfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Routine\viewintimationrotfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Stability\addtrstbfrdgl.designer.vb">
+      <DependentUpon>addtrstbfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Stability\addtrstbfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Stability\newcancelreqstbfrdgl.designer.vb">
+      <DependentUpon>newcancelreqstbfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Stability\newcancelreqstbfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Stability\updatetrstb.designer.vb">
+      <DependentUpon>updatetrstb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Stability\updatetrstb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Stability\viewcancelintstbfrdgl.designer.vb">
+      <DependentUpon>viewcancelintstbfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Stability\viewcancelintstbfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\Stability\viewintimationstbfrdgl.designer.vb">
+      <DependentUpon>viewintimationstbfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\Stability\viewintimationstbfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\TR Status\trviewaudit.Designer.vb">
+      <DependentUpon>trviewaudit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\TR Status\trviewaudit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRD Senior\TR Status\viewtrstatusfrdgl.designer.vb">
+      <DependentUpon>viewtrstatusfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRD Senior\TR Status\viewtrstatusfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT Admin\adduser.designer.vb">
+      <DependentUpon>adduser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IT Admin\adduser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT Admin\changepwit.designer.vb">
+      <DependentUpon>changepwit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IT Admin\changepwit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT Admin\homepageit.designer.vb">
+      <DependentUpon>homepageit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IT Admin\homepageit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT Admin\runbackup.Designer.vb">
+      <DependentUpon>runbackup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IT Admin\runbackup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT Admin\updateuser.designer.vb">
+      <DependentUpon>updateuser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IT Admin\updateuser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT Admin\userview.designer.vb">
+      <DependentUpon>userview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IT Admin\userview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\changeinitialpw.designer.vb">
+      <DependentUpon>changeinitialpw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\changeinitialpw.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\login.designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Dashboard\inventrydashboard.Designer.vb">
+      <DependentUpon>inventrydashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Dashboard\inventrydashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Masters\addbrand.Designer.vb">
+      <DependentUpon>addbrand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Masters\addbrand.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Masters\addgeneric.Designer.vb">
+      <DependentUpon>addgeneric.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Masters\addgeneric.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Masters\addmanuf.Designer.vb">
+      <DependentUpon>addmanuf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Masters\addmanuf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Masters\addmaterialname.Designer.vb">
+      <DependentUpon>addmaterialname.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Masters\addmaterialname.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Masters\addsuppl.Designer.vb">
+      <DependentUpon>addsuppl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Masters\addsuppl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Masters\viewbrandmaster.Designer.vb">
+      <DependentUpon>viewbrandmaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Masters\viewbrandmaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Masters\viewgenmaster.Designer.vb">
+      <DependentUpon>viewgenmaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Masters\viewgenmaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Masters\viewmanufmaster.Designer.vb">
+      <DependentUpon>viewmanufmaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Masters\viewmanufmaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Masters\viewmaterialnamemaster.Designer.vb">
+      <DependentUpon>viewmaterialnamemaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Masters\viewmaterialnamemaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Masters\viewsuplmaster.Designer.vb">
+      <DependentUpon>viewsuplmaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Masters\viewsuplmaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Material\Add\addmaterial.designer.vb">
+      <DependentUpon>addmaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Material\Add\addmaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\materialconsumption.Designer.vb">
+      <DependentUpon>materialconsumption.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\materialconsumption.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\morematerialdetails.Designer.vb">
+      <DependentUpon>morematerialdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\morematerialdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\Scrap\materialconsumpt.Designer.vb">
+      <DependentUpon>materialconsumpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\Scrap\materialconsumpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\Scrap\viewmaterialconsumpcategory.Designer.vb">
+      <DependentUpon>viewmaterialconsumpcategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\Scrap\viewmaterialconsumpcategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\Scrap\viewmaterialconsumpdetails.Designer.vb">
+      <DependentUpon>viewmaterialconsumpdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\Scrap\viewmaterialconsumpdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\Scrap\viewmaterialreconciliation.Designer.vb">
+      <DependentUpon>viewmaterialreconciliation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Material\consumption\Scrap\viewmaterialreconciliation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material Management\Material\viewmaterialdetails.Designer.vb">
+      <DependentUpon>viewmaterialdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Material Management\Material\viewmaterialdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Product License Tracker\addlicense.Designer.vb">
+      <DependentUpon>addlicense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product License Tracker\addlicense.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product License Tracker\viewlicensedetails.Designer.vb">
+      <DependentUpon>viewlicensedetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product License Tracker\viewlicensedetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product License Tracker\viewlicenseproductwise.Designer.vb">
+      <DependentUpon>viewlicenseproductwise.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Product License Tracker\viewlicenseproductwise.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="provisionDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>provisionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="provisionDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>provisionDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management for FRD\viewrldmasterdatafrd.designer.vb">
+      <DependentUpon>viewrldmasterdatafrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management for FRD\viewrldmasterdatafrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RLD Management\Issuance\esignrld.Designer.vb">
+      <DependentUpon>esignrld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management\Issuance\esignrld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RLD Management\Report\DataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management\RLD Master Data\addrld.designer.vb">
+      <DependentUpon>addrld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management\RLD Master Data\addrld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RLD Management\RLD Master Data\detailviewrld.designer.vb">
+      <DependentUpon>detailviewrld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management\RLD Master Data\detailviewrld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RLD Management\RLD Master Data\exportrldrecon.designer.vb">
+      <DependentUpon>exportrldrecon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management\RLD Master Data\exportrldrecon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RLD Management\Issuance\issuerldsample.Designer.vb">
+      <DependentUpon>issuerldsample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management\Issuance\issuerldsample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RLD Management\RLD Master Data\updaterld.designer.vb">
+      <DependentUpon>updaterld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management\RLD Master Data\updaterld.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RLD Management\RLD Master Data\viewrldmasterdata.designer.vb">
+      <DependentUpon>viewrldmasterdata.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management\RLD Master Data\viewrldmasterdata.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RLD Management\Issuance\viewrldrecon.designer.vb">
+      <DependentUpon>viewrldrecon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RLD Management\Issuance\viewrldrecon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SMS\sms.Designer.vb">
+      <DependentUpon>sms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SMS\sms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management for All\detailcalenderview.designer.vb">
+      <DependentUpon>detailcalenderview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management for All\detailcalenderview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management for All\detailviewstabilitysample.designer.vb">
+      <DependentUpon>detailviewstabilitysample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management for All\detailviewstabilitysample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management for All\stabilitycalender.designer.vb">
+      <DependentUpon>stabilitycalender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management for All\stabilitycalender.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management for All\viewstabilitysampledetails.designer.vb">
+      <DependentUpon>viewstabilitysampledetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management for All\viewstabilitysampledetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\changepw.designer.vb">
+      <DependentUpon>changepw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\changepw.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Charging\addplanner.designer.vb">
+      <DependentUpon>addplanner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Charging\addplanner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Charging\boxinchamber.designer.vb">
+      <DependentUpon>boxinchamber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Charging\boxinchamber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Charging\chambers.designer.vb">
+      <DependentUpon>chambers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Charging\chambers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Charging\currsch.designer.vb">
+      <DependentUpon>currsch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Charging\currsch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Charging\detailchrgplnr.designer.vb">
+      <DependentUpon>detailchrgplnr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Charging\detailchrgplnr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Charging\detailviewchrgplnr.designer.vb">
+      <DependentUpon>detailviewchrgplnr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Charging\detailviewchrgplnr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Charging\partwithdrawalfromchamber.designer.vb">
+      <DependentUpon>partwithdrawalfromchamber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Charging\partwithdrawalfromchamber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Charging\upchrgbox.designer.vb">
+      <DependentUpon>upchrgbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Charging\upchrgbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Charging\viewchrgplanner.designer.vb">
+      <DependentUpon>viewchrgplanner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Charging\viewchrgplanner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Dashboard\dashboard.designer.vb">
+      <DependentUpon>dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Dashboard\dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Export\exportmonthlywithdrawal.designer.vb">
+      <DependentUpon>exportmonthlywithdrawal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Export\exportmonthlywithdrawal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Export\exportrecon.designer.vb">
+      <DependentUpon>exportrecon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Export\exportrecon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Export\exportyearlywithdrawal.designer.vb">
+      <DependentUpon>exportyearlywithdrawal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Export\exportyearlywithdrawal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\homepage.designer.vb">
+      <DependentUpon>homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\homepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Masters\addcon.designer.vb">
+      <DependentUpon>addcon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Masters\addcon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Masters\addgenericname.designer.vb">
+      <DependentUpon>addgenericname.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Masters\addgenericname.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Masters\addpack.designer.vb">
+      <DependentUpon>addpack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Masters\addpack.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Masters\addpro.designer.vb">
+      <DependentUpon>addpro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Masters\addpro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Masters\masters.designer.vb">
+      <DependentUpon>masters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Masters\masters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Masters\updatechrgdetails.designer.vb">
+      <DependentUpon>updatechrgdetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Masters\updatechrgdetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Masters\viewchrgcorrections.designer.vb">
+      <DependentUpon>viewchrgcorrections.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Masters\viewchrgcorrections.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\DQA\addcommnetsdqa.Designer.vb">
+      <DependentUpon>addcommnetsdqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\DQA\addcommnetsdqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\DQA\detailviewprotocoldqa.Designer.vb">
+      <DependentUpon>detailviewprotocoldqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\DQA\detailviewprotocoldqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\DQA\viewstabilityprotocoldqa.Designer.vb">
+      <DependentUpon>viewstabilityprotocoldqa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\DQA\viewstabilityprotocoldqa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Jr\addprotocol.designer.vb">
+      <DependentUpon>addprotocol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Jr\addprotocol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Jr\detailviewprotocol.Designer.vb">
+      <DependentUpon>detailviewprotocol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Jr\detailviewprotocol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Jr\viewcomments.Designer.vb">
+      <DependentUpon>viewcomments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Jr\viewcomments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Jr\viewstabilityprotocol.Designer.vb">
+      <DependentUpon>viewstabilityprotocol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Jr\viewstabilityprotocol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Sr\detailviewprotocolfrdgl.Designer.vb">
+      <DependentUpon>detailviewprotocolfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Sr\detailviewprotocolfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Sr\viewstabilityprotocolfrdgl.Designer.vb">
+      <DependentUpon>viewstabilityprotocolfrdgl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Protocols\FRD Sr\viewstabilityprotocolfrdgl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Report\DataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Report\DataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Sample Reconciliation\issuedunissuedsample.designer.vb">
+      <DependentUpon>issuedunissuedsample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Sample Reconciliation\issuedunissuedsample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Sample Reconciliation\sampleview.designer.vb">
+      <DependentUpon>sampleview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Sample Reconciliation\sampleview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Sample Reconciliation\viewreconciliation.designer.vb">
+      <DependentUpon>viewreconciliation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Sample Reconciliation\viewreconciliation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\actwithdrawal.Designer.vb">
+      <DependentUpon>actwithdrawal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\actwithdrawal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\box.designer.vb">
+      <DependentUpon>box.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\box.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\calender.designer.vb">
+      <DependentUpon>calender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\calender.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\detailviewwithplnr.designer.vb">
+      <DependentUpon>detailviewwithplnr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\detailviewwithplnr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\detailwithplnr.designer.vb">
+      <DependentUpon>detailwithplnr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\detailwithplnr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\issuepartwithsample.designer.vb">
+      <DependentUpon>issuepartwithsample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\issuepartwithsample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\itemsinbox.designer.vb">
+      <DependentUpon>itemsinbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\itemsinbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\upwithbox.designer.vb">
+      <DependentUpon>upwithbox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\upwithbox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\viewpartwithsample.designer.vb">
+      <DependentUpon>viewpartwithsample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\viewpartwithsample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\viewwitdplanner.designer.vb">
+      <DependentUpon>viewwitdplanner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Stability Management\Withdrawal\viewwitdplanner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About\about.resx">
+      <DependentUpon>about.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Archival\changelocation.resx">
+      <DependentUpon>changelocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Archival\Location Matrix\viewlocationdocdetails.resx">
+      <DependentUpon>viewlocationdocdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Archival\Location Matrix\viewlocationmain.resx">
+      <DependentUpon>viewlocationmain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Archival\Location Matrix\viewlocationsub.resx">
+      <DependentUpon>viewlocationsub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Archival\updatedocdetial.resx">
+      <DependentUpon>updatedocdetial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Archival\viewarchivecatogery.resx">
+      <DependentUpon>viewarchivecatogery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Archival\viewarchivedocdetails.resx">
+      <DependentUpon>viewarchivedocdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Archival\viewarchivedoctype.resx">
+      <DependentUpon>viewarchivedoctype.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\adddcotype.resx">
+      <DependentUpon>adddcotype.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\adddoccategory.resx">
+      <DependentUpon>adddoccategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\archivedoc.resx">
+      <DependentUpon>archivedoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\esigndoccorrection.resx">
+      <DependentUpon>esigndoccorrection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\esigndoccorrectionhandover.resx">
+      <DependentUpon>esigndoccorrectionhandover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\esigndochandover.resx">
+      <DependentUpon>esigndochandover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\esignhandoverfromdataupload.resx">
+      <DependentUpon>esignhandoverfromdataupload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\handover.resx">
+      <DependentUpon>handover.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\handovercorrections.resx">
+      <DependentUpon>handovercorrections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\openproductlink.resx">
+      <DependentUpon>openproductlink.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\returnforcorrections.resx">
+      <DependentUpon>returnforcorrections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\updatehandoverdocdetial.resx">
+      <DependentUpon>updatehandoverdocdetial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\viewcorrectionsdocs.resx">
+      <DependentUpon>viewcorrectionsdocs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\viewdocdetails.resx">
+      <DependentUpon>viewdocdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\viewhandoverdcatogery.resx">
+      <DependentUpon>viewhandoverdcatogery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Handover\viewhandoverdoctype.resx">
+      <DependentUpon>viewhandoverdoctype.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Issuance\esignissuance.resx">
+      <DependentUpon>esignissuance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Issuance\issuancecalender.resx">
+      <DependentUpon>issuancecalender.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Issuance\viewdocissuance.resx">
+      <DependentUpon>viewdocissuance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Issuance\viewdocissuanceregister.resx">
+      <DependentUpon>viewdocissuanceregister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Issuance\viewissuancehistory.resx">
+      <DependentUpon>viewissuancehistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Return\esignreturn.resx">
+      <DependentUpon>esignreturn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Issuance\issuedocument.resx">
+      <DependentUpon>issuedocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Return\returndocument.resx">
+      <DependentUpon>returndocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Issuance\viewissueddocdetails.resx">
+      <DependentUpon>viewissueddocdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Issuance\viewissuedoccatogery.resx">
+      <DependentUpon>viewissuedoccatogery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Archival Management\Issuance\viewissuedoctype.resx">
+      <DependentUpon>viewissuedoctype.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\changepward.resx">
+      <DependentUpon>changepward.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\issueatrdev.resx">
+      <DependentUpon>issueatrdev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\newintimationarddev.resx">
+      <DependentUpon>newintimationarddev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\sendcorrecteddatatodqa.resx">
+      <DependentUpon>sendcorrecteddatatodqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\senddatatodqa.resx">
+      <DependentUpon>senddatatodqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\setlnb.resx">
+      <DependentUpon>setlnb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\trcancelprint.resx">
+      <DependentUpon>trcancelprint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\trprintdev.resx">
+      <DependentUpon>trprintdev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\uptrinatrdev.resx">
+      <DependentUpon>uptrinatrdev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\viewatrissuancelogard.resx">
+      <DependentUpon>viewatrissuancelogard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\viewatrissued.resx">
+      <DependentUpon>viewatrissued.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\viewcancelintimations.resx">
+      <DependentUpon>viewcancelintimations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\viewcorrections.resx">
+      <DependentUpon>viewcorrections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Development\viewcorrectionsdate.resx">
+      <DependentUpon>viewcorrectionsdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Export Data\exportdataard.resx">
+      <DependentUpon>exportdataard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\homepageard.resx">
+      <DependentUpon>homepageard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Product Documents\ATR\atrhstryard.resx">
+      <DependentUpon>atrhstryard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Product Documents\ATR\viewatrdetailsard.resx">
+      <DependentUpon>viewatrdetailsard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Product Documents\ATR\viewproductatrard.resx">
+      <DependentUpon>viewproductatrard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Product Documents\PDS\viewpdsdetailsard.resx">
+      <DependentUpon>viewpdsdetailsard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Product Documents\PDS\viewproductpdsard.resx">
+      <DependentUpon>viewproductpdsard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Product Documents\STP\stphstryard.resx">
+      <DependentUpon>stphstryard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Product Documents\STP\viewproductstpard.resx">
+      <DependentUpon>viewproductstpard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Product Documents\STP\viewstpdetailsard.resx">
+      <DependentUpon>viewstpdetailsard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Stability Compilation\Compilation\addstbcompilation.resx">
+      <DependentUpon>addstbcompilation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Stability Compilation\Compilation\updatestbcompilation.resx">
+      <DependentUpon>updatestbcompilation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Stability Compilation\Compilation\viewstbcompilation.resx">
+      <DependentUpon>viewstbcompilation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Stability Compilation\Compilation\viewuptrendform.resx">
+      <DependentUpon>viewuptrendform.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Stability Compilation\Export\exportstbcompilation.resx">
+      <DependentUpon>exportstbcompilation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ARD Group Leader\Stability Compilation\Report\Report5.rdlc" />
+    <EmbeddedResource Include="ARD Group Leader\Stability Compilation\Trend\viewtrend.resx">
+      <DependentUpon>viewtrend.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard All\dashboardall.resx">
+      <DependentUpon>dashboardall.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard All\viewpendingtrdev.resx">
+      <DependentUpon>viewpendingtrdev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard All\viewpendingtrrot.resx">
+      <DependentUpon>viewpendingtrrot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard All\viewpendingtrstb.resx">
+      <DependentUpon>viewpendingtrstb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\ATR\addatr.resx">
+      <DependentUpon>addatr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\ATR\atrhstry.resx">
+      <DependentUpon>atrhstry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\ATR\issueatrdqa.resx">
+      <DependentUpon>issueatrdqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\ATR\issuencelog.resx">
+      <DependentUpon>issuencelog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\ATR\uptrinatrdqa.resx">
+      <DependentUpon>uptrinatrdqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\ATR\viewatrdetails.resx">
+      <DependentUpon>viewatrdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\ATR\viewatrissuancelog.resx">
+      <DependentUpon>viewatrissuancelog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\ATR\viewproductatr.resx">
+      <DependentUpon>viewproductatr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\changepwdqa.resx">
+      <DependentUpon>changepwdqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Data From ARD\correctiontoard.resx">
+      <DependentUpon>correctiontoard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Data From ARD\datafromardatr.resx">
+      <DependentUpon>datafromardatr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Data From ARD\datafromardlnb.resx">
+      <DependentUpon>datafromardlnb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Data From ARD\releasedataatr.resx">
+      <DependentUpon>releasedataatr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Data From ARD\releasedatalnb.resx">
+      <DependentUpon>releasedatalnb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\homepagedqa.resx">
+      <DependentUpon>homepagedqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Product Master\viewattachments.resx">
+      <DependentUpon>viewattachments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Upload Data\reuploaddata.resx">
+      <DependentUpon>reuploaddata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipment Usage\updateequipdetails.resx">
+      <DependentUpon>updateequipdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipment Usage\viewequipdetails.resx">
+      <DependentUpon>viewequipdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipment Usage\viewequipusage.resx">
+      <DependentUpon>viewequipusage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipment Usage\viewusagelog.resx">
+      <DependentUpon>viewusagelog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Product Masters\viewproductmastersdqa.resx">
+      <DependentUpon>viewproductmastersdqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Test Masters\viewtestmaster.resx">
+      <DependentUpon>viewtestmaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\TR Status\detailview.resx">
+      <DependentUpon>detailview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\TR Status\viewtrstatus.resx">
+      <DependentUpon>viewtrstatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Dashboard\dashboardfrd.resx">
+      <DependentUpon>dashboardfrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Dashboard\viewreleasedtrdev.resx">
+      <DependentUpon>viewreleasedtrdev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Dashboard\viewreleasedtrrot.resx">
+      <DependentUpon>viewreleasedtrrot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Dashboard\viewreleasedtrstb.resx">
+      <DependentUpon>viewreleasedtrstb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Export Data\exportdata.resx">
+      <DependentUpon>exportdata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Export Data\Report1.rdlc" />
+    <EmbeddedResource Include="DQA\Product Master\addproduct.resx">
+      <DependentUpon>addproduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Test Masters\addtest.resx">
+      <DependentUpon>addtest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\PDS\addpds.resx">
+      <DependentUpon>addpds.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\PDS\updatepds.resx">
+      <DependentUpon>updatepds.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\PDS\viewpdsdetails.resx">
+      <DependentUpon>viewpdsdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\PDS\viewproductpds.resx">
+      <DependentUpon>viewproductpds.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\STP\addstp.resx">
+      <DependentUpon>addstp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\STP\addstpmanual.resx">
+      <DependentUpon>addstpmanual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\STP\stphstry.resx">
+      <DependentUpon>stphstry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\STP\viewproductstp.resx">
+      <DependentUpon>viewproductstp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\STP\viewstpdetails.resx">
+      <DependentUpon>viewstpdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Upload Data\uploaddata.resx">
+      <DependentUpon>uploaddata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Upload Data\viewreleaseddata.resx">
+      <DependentUpon>viewreleaseddata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Development\addtrdev.resx">
+      <DependentUpon>addtrdev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\changepwfrdj.resx">
+      <DependentUpon>changepwfrdj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Development\newcancelreqdev.resx">
+      <DependentUpon>newcancelreqdev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Development\viewcancelintdev.resx">
+      <DependentUpon>viewcancelintdev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\homepagefrdj.resx">
+      <DependentUpon>homepagefrdj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Development\viewintimationdev.resx">
+      <DependentUpon>viewintimationdev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\PDS\viewpdsdetailsfrd.resx">
+      <DependentUpon>viewpdsdetailsfrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\PDS\viewproductpdsfrd.resx">
+      <DependentUpon>viewproductpdsfrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Product Master\addstrength.resx">
+      <DependentUpon>addstrength.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Product Masters\viewproductdetails.resx">
+      <DependentUpon>viewproductdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Product Master\viewproductdetailsdqa.resx">
+      <DependentUpon>viewproductdetailsdqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DQA\Product Master\viewproductmasters.resx">
+      <DependentUpon>viewproductmasters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Routine\newcancelreqrot.resx">
+      <DependentUpon>newcancelreqrot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Routine\viewcancelintrot.resx">
+      <DependentUpon>viewcancelintrot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Routine\viewintimationrot.resx">
+      <DependentUpon>viewintimationrot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Stability\addtrstb.resx">
+      <DependentUpon>addtrstb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Stability\newcancelreqstb.resx">
+      <DependentUpon>newcancelreqstb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Stability\viewcancelintstb.resx">
+      <DependentUpon>viewcancelintstb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Stability\viewintimationstb.resx">
+      <DependentUpon>viewintimationstb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\Routine\addtrrot.resx">
+      <DependentUpon>addtrrot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\STP\stphstryfrd.resx">
+      <DependentUpon>stphstryfrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\STP\viewproductstpfrd.resx">
+      <DependentUpon>viewproductstpfrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\STP\viewstpdetailfrd.resx">
+      <DependentUpon>viewstpdetailfrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\TR Status\viewdata.resx">
+      <DependentUpon>viewdata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Junior\TR Status\viewtrstatusfrdj.resx">
+      <DependentUpon>viewtrstatusfrdj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Product LNB\esignlnb.resx">
+      <DependentUpon>esignlnb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Product LNB\issuelnb.resx">
+      <DependentUpon>issuelnb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Product LNB\viewlnbdetails.resx">
+      <DependentUpon>viewlnbdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Product LNB\viewlnbmaster.resx">
+      <DependentUpon>viewlnbmaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\changepwfrdgl.resx">
+      <DependentUpon>changepwfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Development\addtrdevfrdgl.resx">
+      <DependentUpon>addtrdevfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Development\newcancelreqdevfrdgl.resx">
+      <DependentUpon>newcancelreqdevfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Development\updatetrdev.resx">
+      <DependentUpon>updatetrdev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Development\viewcancelintdevfrdgl.resx">
+      <DependentUpon>viewcancelintdevfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Development\viewintimationdevfrdgl.resx">
+      <DependentUpon>viewintimationdevfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\homepagefrdgl.resx">
+      <DependentUpon>homepagefrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Routine\addtrrotfrdgl.resx">
+      <DependentUpon>addtrrotfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Routine\newcancelreqrotfrdgl.resx">
+      <DependentUpon>newcancelreqrotfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Routine\updatetrrot.resx">
+      <DependentUpon>updatetrrot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Routine\viewcancelintrotfrdgl.resx">
+      <DependentUpon>viewcancelintrotfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Routine\viewintimationrotfrdgl.resx">
+      <DependentUpon>viewintimationrotfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Stability\addtrstbfrdgl.resx">
+      <DependentUpon>addtrstbfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Stability\newcancelreqstbfrdgl.resx">
+      <DependentUpon>newcancelreqstbfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Stability\updatetrstb.resx">
+      <DependentUpon>updatetrstb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Stability\viewcancelintstbfrdgl.resx">
+      <DependentUpon>viewcancelintstbfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\Stability\viewintimationstbfrdgl.resx">
+      <DependentUpon>viewintimationstbfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\TR Status\trviewaudit.resx">
+      <DependentUpon>trviewaudit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRD Senior\TR Status\viewtrstatusfrdgl.resx">
+      <DependentUpon>viewtrstatusfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Admin\adduser.resx">
+      <DependentUpon>adduser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Admin\changepwit.resx">
+      <DependentUpon>changepwit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Admin\homepageit.resx">
+      <DependentUpon>homepageit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Admin\runbackup.resx">
+      <DependentUpon>runbackup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Admin\updateuser.resx">
+      <DependentUpon>updateuser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT Admin\userview.resx">
+      <DependentUpon>userview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\changeinitialpw.resx">
+      <DependentUpon>changeinitialpw.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Dashboard\inventrydashboard.resx">
+      <DependentUpon>inventrydashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Masters\addbrand.resx">
+      <DependentUpon>addbrand.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Masters\addgeneric.resx">
+      <DependentUpon>addgeneric.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Masters\addmanuf.resx">
+      <DependentUpon>addmanuf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Masters\addmaterialname.resx">
+      <DependentUpon>addmaterialname.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Masters\addsuppl.resx">
+      <DependentUpon>addsuppl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Masters\viewbrandmaster.resx">
+      <DependentUpon>viewbrandmaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Masters\viewgenmaster.resx">
+      <DependentUpon>viewgenmaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Masters\viewmanufmaster.resx">
+      <DependentUpon>viewmanufmaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Masters\viewmaterialnamemaster.resx">
+      <DependentUpon>viewmaterialnamemaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Masters\viewsuplmaster.resx">
+      <DependentUpon>viewsuplmaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Material\Add\addmaterial.resx">
+      <DependentUpon>addmaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Material\consumption\materialconsumption.resx">
+      <DependentUpon>materialconsumption.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Material\consumption\morematerialdetails.resx">
+      <DependentUpon>morematerialdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Material\consumption\Scrap\materialconsumpt.resx">
+      <DependentUpon>materialconsumpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Material\consumption\Scrap\viewmaterialconsumpcategory.resx">
+      <DependentUpon>viewmaterialconsumpcategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Material\consumption\Scrap\viewmaterialconsumpdetails.resx">
+      <DependentUpon>viewmaterialconsumpdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Material\consumption\Scrap\viewmaterialreconciliation.resx">
+      <DependentUpon>viewmaterialreconciliation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material Management\Material\viewmaterialdetails.resx">
+      <DependentUpon>viewmaterialdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product License Tracker\addlicense.resx">
+      <DependentUpon>addlicense.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product License Tracker\viewlicensedetails.resx">
+      <DependentUpon>viewlicensedetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product License Tracker\viewlicenseproductwise.resx">
+      <DependentUpon>viewlicenseproductwise.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RLD Management for FRD\viewrldmasterdatafrd.resx">
+      <DependentUpon>viewrldmasterdatafrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RLD Management\Issuance\esignrld.resx">
+      <DependentUpon>esignrld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RLD Management\Report\Report2.rdlc" />
+    <EmbeddedResource Include="RLD Management\RLD Master Data\addrld.resx">
+      <DependentUpon>addrld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RLD Management\RLD Master Data\detailviewrld.resx">
+      <DependentUpon>detailviewrld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RLD Management\RLD Master Data\exportrldrecon.resx">
+      <DependentUpon>exportrldrecon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RLD Management\Issuance\issuerldsample.resx">
+      <DependentUpon>issuerldsample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RLD Management\RLD Master Data\updaterld.resx">
+      <DependentUpon>updaterld.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RLD Management\RLD Master Data\viewrldmasterdata.resx">
+      <DependentUpon>viewrldmasterdata.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RLD Management\Issuance\viewrldrecon.resx">
+      <DependentUpon>viewrldrecon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SMS\sms.resx">
+      <DependentUpon>sms.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management for All\detailcalenderview.resx">
+      <DependentUpon>detailcalenderview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management for All\detailviewstabilitysample.resx">
+      <DependentUpon>detailviewstabilitysample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management for All\stabilitycalender.resx">
+      <DependentUpon>stabilitycalender.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management for All\viewstabilitysampledetails.resx">
+      <DependentUpon>viewstabilitysampledetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\changepw.resx">
+      <DependentUpon>changepw.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Charging\addplanner.resx">
+      <DependentUpon>addplanner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Charging\boxinchamber.resx">
+      <DependentUpon>boxinchamber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Charging\chambers.resx">
+      <DependentUpon>chambers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Charging\currsch.resx">
+      <DependentUpon>currsch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Charging\detailchrgplnr.resx">
+      <DependentUpon>detailchrgplnr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Charging\detailviewchrgplnr.resx">
+      <DependentUpon>detailviewchrgplnr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Charging\partwithdrawalfromchamber.resx">
+      <DependentUpon>partwithdrawalfromchamber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Charging\upchrgbox.resx">
+      <DependentUpon>upchrgbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Charging\viewchrgplanner.resx">
+      <DependentUpon>viewchrgplanner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Dashboard\dashboard.resx">
+      <DependentUpon>dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Export\exportmonthlywithdrawal.resx">
+      <DependentUpon>exportmonthlywithdrawal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Export\exportrecon.resx">
+      <DependentUpon>exportrecon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Export\exportyearlywithdrawal.resx">
+      <DependentUpon>exportyearlywithdrawal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\homepage.resx">
+      <DependentUpon>homepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Masters\addcon.resx">
+      <DependentUpon>addcon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Masters\addgenericname.resx">
+      <DependentUpon>addgenericname.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Masters\addpack.resx">
+      <DependentUpon>addpack.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Masters\addpro.resx">
+      <DependentUpon>addpro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Masters\masters.resx">
+      <DependentUpon>masters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Masters\updatechrgdetails.resx">
+      <DependentUpon>updatechrgdetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Masters\viewchrgcorrections.resx">
+      <DependentUpon>viewchrgcorrections.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Protocols\DQA\addcommnetsdqa.resx">
+      <DependentUpon>addcommnetsdqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Protocols\DQA\detailviewprotocoldqa.resx">
+      <DependentUpon>detailviewprotocoldqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Protocols\DQA\viewstabilityprotocoldqa.resx">
+      <DependentUpon>viewstabilityprotocoldqa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Protocols\FRD Jr\addprotocol.resx">
+      <DependentUpon>addprotocol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Protocols\FRD Jr\detailviewprotocol.resx">
+      <DependentUpon>detailviewprotocol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Protocols\FRD Jr\viewcomments.resx">
+      <DependentUpon>viewcomments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Protocols\FRD Jr\viewstabilityprotocol.resx">
+      <DependentUpon>viewstabilityprotocol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Protocols\FRD Sr\detailviewprotocolfrdgl.resx">
+      <DependentUpon>detailviewprotocolfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Protocols\FRD Sr\viewstabilityprotocolfrdgl.resx">
+      <DependentUpon>viewstabilityprotocolfrdgl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Report\Report4.rdlc" />
+    <EmbeddedResource Include="Stability Management\Report\Report3.rdlc" />
+    <EmbeddedResource Include="Stability Management\Sample Reconciliation\issuedunissuedsample.resx">
+      <DependentUpon>issuedunissuedsample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Sample Reconciliation\sampleview.resx">
+      <DependentUpon>sampleview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Sample Reconciliation\viewreconciliation.resx">
+      <DependentUpon>viewreconciliation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Withdrawal\actwithdrawal.resx">
+      <DependentUpon>actwithdrawal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Withdrawal\box.resx">
+      <DependentUpon>box.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Withdrawal\calender.resx">
+      <DependentUpon>calender.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Withdrawal\detailviewwithplnr.resx">
+      <DependentUpon>detailviewwithplnr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Withdrawal\detailwithplnr.resx">
+      <DependentUpon>detailwithplnr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Withdrawal\issuepartwithsample.resx">
+      <DependentUpon>issuepartwithsample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Withdrawal\itemsinbox.resx">
+      <DependentUpon>itemsinbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Withdrawal\upwithbox.resx">
+      <DependentUpon>upwithbox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Withdrawal\viewpartwithsample.resx">
+      <DependentUpon>viewpartwithsample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stability Management\Withdrawal\viewwitdplanner.resx">
+      <DependentUpon>viewwitdplanner.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ARD Group Leader\Stability Compilation\Report\DataSet5.xsc">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ARD Group Leader\Stability Compilation\Report\DataSet5.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet5.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="ARD Group Leader\Stability Compilation\Report\DataSet5.xss">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FRD Junior\Export Data\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FRD Junior\Export Data\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="FRD Junior\Export Data\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\viewtrend.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="provisionDataSet.xsc">
+      <DependentUpon>provisionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="provisionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>provisionDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="provisionDataSet.xss">
+      <DependentUpon>provisionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="provisionDataSet1.xsc">
+      <DependentUpon>provisionDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="provisionDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>provisionDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="provisionDataSet1.xss">
+      <DependentUpon>provisionDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Provision_TemporaryKey.pfx" />
+    <None Include="RLD Management\Report\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="RLD Management\Report\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="RLD Management\Report\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Stability Management\Report\DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Stability Management\Report\DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Stability Management\Report\DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Stability Management\Report\DataSet4.xsc">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Stability Management\Report\DataSet4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Stability Management\Report\DataSet4.xss">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\rotate_30px1.png" />
+    <None Include="Images\arrow_pointing_left_50px_1.png" />
+    <None Include="Images\arrow_pointing_left_50px.png" />
+    <None Include="Images\arrow_50px_1.png" />
+    <None Include="Images\arrow_50px.png" />
+    <None Include="Images\authentication_40px.png" />
+    <None Include="Images\username_logo_32.png" />
+    <None Include="Images\password_logo_32.png" />
+    <None Include="Images\PROVISION.gif" />
+    <None Include="Images\PROVISION %281%29.gif" />
+    <None Include="Images\PROVISION %282%29.gif" />
+    <None Include="Images\view_30px.png" />
+    <None Include="Images\view_30px_white.png" />
+    <None Include="Resources\File_Image.bmp" />
+    <None Include="Images\818361.jpg" />
+    <None Include="Images\bokeh-effect.jpg" />
+    <Content Include="Images\File_Image.png" />
+    <None Include="Resources\File_Image.png" />
+    <None Include="Resources\File_Image_New.png" />
+    <None Include="Resources\wheel.png" />
+    <None Include="Images\istockphoto-1174989472-170667a.jpg" />
+    <None Include="Images\PROVISION-2--unscreen.gif" />
+    <None Include="Images\rm222batch5-kul-06.jpg" />
+    <None Include="Images\output-onlinegiftools %284%29.gif" />
+    <None Include="Images\Provision-4--unscreen.gif" />
+    <None Include="Images\Provision_Crop.gif" />
+    <None Include="Images\icons8-rupee-30.png" />
+    <None Include="Images\money_bag_rupee_30px.png" />
+    <None Include="Images\inventry-bg.png" />
+    <None Include="Images\inventry-bg1.jpg" />
+    <None Include="Images\icons8-stocks.gif" />
+    <None Include="Images\vecteezy_nature-green-tree-fresh-leaf-on-beautiful-blurred-soft-bokeh-sunlight-background-with-free-copy-space-spring-summer-or-environment-cover-page-template-web-banner-and-header_2885318.jpg" />
+    <Content Include="Resources\FRD-AFSM-01.png" />
+    <Content Include="Resources\FRD-AUCL-02.png" />
+    <Content Include="Resources\FRD-CFIL-03.png" />
+    <Content Include="Resources\FRD-CFIL-04.png" />
+    <Content Include="Resources\FRD-COAT-02.png" />
+    <Content Include="Resources\FRD-COAT-03.png" />
+    <Content Include="Resources\FRD-COMP-03.png" />
+    <Content Include="Resources\FRD-COMP-04.png" />
+    <Content Include="Resources\FRD-COMP-05.png" />
+    <Content Include="Resources\FRD-DCBL-02.png" />
+    <Content Include="Resources\FRD-FBPR-04.png" />
+    <Content Include="Resources\FRD-ISEA-02.png" />
+    <Content Include="Resources\FRD-LYOP-01.png" />
+    <Content Include="Resources\FRD-MCFD-01.png" />
+    <Content Include="Resources\FRD-PACK-01.png" />
+    <Content Include="Resources\FRD-RCOM-01.png" />
+    <Content Include="Resources\FRD-RMGR-01.png" />
+    <Content Include="Resources\FRD-RVSC-01.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Images\add_30px.png" />
+    <None Include="Images\add_50px.png" />
+    <None Include="Images\add1_50px.png" />
+    <None Include="Images\add_trash_30px.png" />
+    <None Include="Images\add_trash1_30px.png" />
+    <Content Include="Images\loginbg.jpg" />
+    <None Include="Images\view_40px.png" />
+    <None Include="Images\user_40px.png" />
+    <None Include="Images\user1_40px.png" />
+    <Content Include="Images\logo.jpg" />
+    <None Include="Images\update_file1_40px.png" />
+    <None Include="Images\update_file_40px.png" />
+    <Content Include="Images\user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
