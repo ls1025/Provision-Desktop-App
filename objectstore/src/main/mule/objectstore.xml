@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:os="http://www.mulesoft.org/schema/mule/os"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/os http://www.mulesoft.org/schema/mule/os/current/mule-os.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="67e667df-c7e1-4bd2-b39f-51083f56a1d1" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<os:object-store name="Object_store" doc:name="Object store" doc:id="5f10a59d-b6dc-443f-b87c-dd821fc68b81"/>
+	<flow name="objectstoreFlow" doc:id="d4546df0-e37a-41a4-ae7a-1511f74f9c7c" >
+		<http:listener doc:name="Listener" doc:id="0dba47a9-fdd3-4235-9ce9-af03dac996d0" config-ref="HTTP_Listener_config" path="store" allowedMethods="POST"/>
+		<os:store doc:name="Store" doc:id="e24eef3c-0198-4afc-b959-c5e8c824202d" key="vars.name" objectStore="Object_store">
+		</os:store>
+	</flow>
+	<flow name="objectstoreFlow1" doc:id="152e76ca-ef2d-453b-9f8b-9fe544ced226" >
+		<http:listener doc:name="Listener" doc:id="e7b663e6-4c95-47a3-9cad-a2cd8387a93b" config-ref="HTTP_Listener_config" path="clear"/>
+		<os:clear doc:name="Clear" doc:id="e6cb3429-0593-425f-99a6-6bc5ac1ee4b3" objectStore="Object_store"/>
+	</flow>
+	<flow name="objectstoreFlow2" doc:id="25c7f59d-8f14-43b1-8bf1-4ec342a89a7e">
+		<http:listener doc:name="Listener" doc:id="6f2d6d45-a9a4-4a54-9189-f43fa5b652ab" config-ref="HTTP_Listener_config" path="retrieveall" />
+		<os:retrieve-all doc:name="Retrieve all" doc:id="7810c9af-9401-4079-b17b-bc4810b94b25" objectStore="Object_store"/>
+	</flow>
+	<flow name="objectstoreFlow3" doc:id="7c40ead1-9547-4e12-8460-ab79202da5ae" >
+		<http:listener doc:name="Listener" doc:id="3fbd196c-9d8c-475d-acd7-82a33811078f" config-ref="HTTP_Listener_config" path="/retrieve"/>
+		<os:retrieve doc:name="Retrieve" doc:id="923de4f4-c8cf-4f12-b771-442a5b387605" key="#[attributes.queryParams.name]" objectStore="Object_store">
+			<os:default-value ><![CDATA[#[attributes.queryParams.id]]]></os:default-value>
+		</os:retrieve>
+	</flow>
+</mule>
