@@ -18,6 +18,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</flow>
 	<flow name="objectstoreFlow1" doc:id="152e76ca-ef2d-453b-9f8b-9fe544ced226" >
 		<http:listener doc:name="Listener" doc:id="e7b663e6-4c95-47a3-9cad-a2cd8387a93b" config-ref="HTTP_Listener_config" path="clear"/>
+		<logger level="INFO" doc:name="Logger" doc:id="149cf656-f118-48b4-ad89-5f07d84627ac" message="welcome"/>
 		<os:clear doc:name="Clear" doc:id="e6cb3429-0593-425f-99a6-6bc5ac1ee4b3" objectStore="Object_store"/>
 	</flow>
 	<flow name="objectstoreFlow2" doc:id="25c7f59d-8f14-43b1-8bf1-4ec342a89a7e">
