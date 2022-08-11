@@ -12,6 +12,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<os:object-store name="Object_store" doc:name="Object store" doc:id="5f10a59d-b6dc-443f-b87c-dd821fc68b81"/>
 	<flow name="objectstoreFlow" doc:id="d4546df0-e37a-41a4-ae7a-1511f74f9c7c" >
 		<http:listener doc:name="Listener" doc:id="0dba47a9-fdd3-4235-9ce9-af03dac996d0" config-ref="HTTP_Listener_config" path="store" allowedMethods="POST"/>
+		<logger level="INFO" doc:name="Logger" doc:id="149cf656-f118-48b4-ad89-5f07d84627ac" message="hii"/>
 		<os:store doc:name="Store" doc:id="e24eef3c-0198-4afc-b959-c5e8c824202d" key="vars.name" objectStore="Object_store">
 		</os:store>
 	</flow>
