@@ -22,6 +22,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</flow>
 	<flow name="objectstoreFlow2" doc:id="25c7f59d-8f14-43b1-8bf1-4ec342a89a7e">
 		<http:listener doc:name="Listener" doc:id="6f2d6d45-a9a4-4a54-9189-f43fa5b652ab" config-ref="HTTP_Listener_config" path="retrieveall" />
+		<logger level="INFO" doc:name="Logger" doc:id="3c650400-a6f9-4387-862b-31a4aaf5f790" message="retrievall logger"/>
 		<os:retrieve-all doc:name="Retrieve all" doc:id="7810c9af-9401-4079-b17b-bc4810b94b25" objectStore="Object_store"/>
 	</flow>
 	<flow name="objectstoreFlow3" doc:id="7c40ead1-9547-4e12-8460-ab79202da5ae" >
